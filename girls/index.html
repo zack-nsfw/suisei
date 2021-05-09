@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls</title>
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/fonts/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/src/img/suisei.png" id="secret" alt="suisei">
+        <nav>
+            <a class="active">Girls<div></div></a>
+            <a href="/">Home<div></div></a>
+            <a href="/films">Films<div></div></a>
+        </nav>
+    </header>
+    <main>
+        <div class="thumbline"></div>
+        <h5 class="title">Videos</h2>
+        <section class="girls" id="vid"></section>
+        <h5 class="title">Pictures</h2>
+        <section class="girls" id="pic"></section>
+    </main>
+    <template id="girl-prev">
+        <div class="girl-prev">
+            <video loop muted></video>
+        </div>
+    </template>
+    <template id="girl-prev_">
+        <div class="girl-prev">
+            <img src="" alt="">
+        </div>
+    </template>
+    <template id="film-template">
+        <div class="overlay">
+            <div class="video girl" id="player">
+                <video loop muted class="girl" src="http://www.database.dev.cc/suisei/video/thumbline.mp4"></video>
+                <div class="video-overlay">
+                    <div id="pb" class="progress-bar"><div id="pbf" class="progress-bar filled"></div></div>
+                    <div class="controls">
+                        <i class="fas fa-play" id="play_btn"></i>
+                        <i id="volume_btn" class="fas fa-volume-up"></i>
+                        <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+                        <i class="fas fa-expand" id="extend_btn"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="/src/js/girls.js"></script>
+</body>
+</html>
