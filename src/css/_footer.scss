@@ -1,0 +1,29 @@
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+        max-width: 70%;
+        button {
+            margin: 0px 20px 20px 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 0.4990371148459384) 100%
+            );
+            font-weight: 600;
+        }
+    }
+}

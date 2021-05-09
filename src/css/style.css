@@ -1,0 +1,510 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+* body {
+  background: #18191a;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+header img {
+  height: 70px;
+  vertical-align: top;
+  pointer-events: none;
+  margin: 0px 10px;
+}
+
+header img#secret {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+header nav {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav a {
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  width: 100px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-right: 22px;
+  text-transform: capitalize;
+  -webkit-transition: background 0.45s ease;
+  transition: background 0.45s ease;
+}
+
+header nav a.active {
+  cursor: default;
+  font-weight: 600;
+  background: #252525;
+}
+
+header nav a.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header nav a.active::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+header nav a.active div::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header nav a.active div::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+header nav a div::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #444;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+header nav a div::before {
+  content: '';
+  width: 2px;
+  height: 105%;
+  background: #444;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+header nav a::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  bottom: 0px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+header nav a::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: #333;
+  position: absolute;
+  left: 0px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+header nav a:hover {
+  background: #252525;
+}
+
+header nav a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header nav a:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+header nav a:hover div::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header nav a:hover div::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.thumbline {
+  background: url("/src/img/thumbline.jpg") center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+main section.prevs {
+  max-width: 100%;
+  padding: 50px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[1];
+      grid-template-columns: repeat(1, 300px);
+  grid-gap: 50px;
+}
+
+main section.prevs div.video-prev {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 10px #000);
+          filter: drop-shadow(0px 0px 10px #000);
+  background: url("/src/img/NotFound.jpg");
+}
+
+main section.prevs div.video-prev p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  padding: 10px;
+  text-shadow: 0px 0px 10px #000;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.499037) 100%);
+  opacity: 0;
+  -webkit-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+}
+
+main section.prevs div.video-prev video {
+  vertical-align: top;
+  pointer-events: none;
+}
+
+main section.prevs div.video-prev:hover p {
+  opacity: 1;
+}
+
+main h5.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100px;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+main section.girls {
+  min-height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main section.girls div.girl-prev {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 25px 50px 25px;
+}
+
+main section.girls div.girl-prev video {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section.girls div.girl-prev img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section.girls div.girl-prev::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.499037) 100%);
+}
+
+main div.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 14%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.95) 100%);
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.overlay div.video {
+  position: relative;
+  width: 1280px;
+}
+
+main div.overlay div.video.girl {
+  height: 720px;
+}
+
+main div.overlay div.video h4 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 24px;
+}
+
+main div.overlay div.video video {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #000;
+}
+
+main div.overlay div.video video.girl {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main div.overlay div.video div.video-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+main div.overlay div.video div.video-overlay:hover {
+  opacity: 1;
+}
+
+main div.overlay div.video div.video-overlay h2.title {
+  padding: 10px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+main div.overlay div.video div.video-overlay div.progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+  bottom: 40px;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+
+main div.overlay div.video div.video-overlay div.progress-bar div.filled {
+  background: red;
+  bottom: 0px;
+  width: 0%;
+}
+
+main div.overlay div.video div.video-overlay div.controls {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+main div.overlay div.video div.video-overlay div.controls i {
+  cursor: pointer;
+}
+
+main div.overlay div.video div.video-overlay div.controls i#play_btn {
+  margin-right: 30px;
+}
+
+main div.overlay div.video div.video-overlay div.controls i#volume_btn {
+  margin-right: 10px;
+}
+
+main div.overlay div.video div.video-overlay div.controls i#extend_btn {
+  position: absolute;
+  right: 20px;
+}
+
+main div.overlay img {
+  height: 80vh;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 300px;
+  max-width: 70%;
+}
+
+footer nav button {
+  margin: 0px 20px 20px 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.499037) 100%);
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
